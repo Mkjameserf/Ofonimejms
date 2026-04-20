@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Professional Portfolio(Mk James Erf')</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+nav:has(a.active) {
+    color: amber;
+}
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hero {
+    height: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url('/storage/emulated/0/xender/image/screenshot_20250812-215714.jpg');
+}
+.hero1 {
+    height: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero  .hero1 h1 {
+    font-size: 48px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.8s ease-in-out;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.section {
+    padding: 100px 8%;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    position: sticky;
+
+    
+}
+
+.section.dark {
+    background: #111;
+    color: white;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.filter-buttons {
+    margin-top: 20px;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 20px;
+}
+
+.filter-buttons .active {
+    background: #667eea;
+    color: white;
+}
+
+.services-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    background: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    width: 280px;
+    transition: 0.3s;
+    transform: translate(20px, 50px);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) rotate(360deg);
+    box-shadow: 0 0 2em #3AA1FF;
+}
+
+form {
+    max-width: 500px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.logo{
+    font-weight: bolder;
+}
+    .icon {
+    width: 500px;
+     float: left;
+    height: 70px;
+    transform: perspective(200px) rotate(6deg);
+        }
+    img {
+            width: 70px;
+            float: left;
+            border-radius: 25%;
+            margin-right: 5px; 
+    }
+    .prf{
+        width: 100px;
+    }
+    .dark{
+        background: #111;
+    }
+    .but{
+        float: right;
+        background: transparent;
+        border-radius: 5px;
+        margin-top: 3px;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    .but:hover{
+    cursor: pointer;
+        box-shadow: 0 0 5px #ff7200, 0 0 5px #ff7200;
+    transition: 0.4s ease-in-out;
+    }
+    .mk{
+        padding-top: 67px;
+        font-size: 18px;
+    }
+    .te{
+        font-size: 12px;
+        border: 2px outset #ccc;
+        color: #ff7200;
+        padding-left: 80px;
+        border-bottom: none;
+        border-right: none;
+    }
+    .emoji{
+        font-size: 16px;
+        padding-left: 100px;
+        font-weight: bolder;
+        border: 2px outset #ccc;
+        color: red;
+        font-family: Courier;
+        border-right: none;
+        
+    }
+    df:hover{
+        color: #ff7200;
+            box-shadow:  0 0 1em #ff7200;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+    }
+    ju:hover{
+        color: #ff7200;
+            box-shadow:  0 0 1em #ff7200;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+    }
+    gt:hover{
+        color: #ff7200;
+            box-shadow:  0 0 1em #ff7200;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+    }
+    .trf{
+        display:alternate;
+        background: #fff;
+        transform: perspective(300px) rotateY(45deg);
+    }
+    .pick{
+        font-family: times;
+        font-size: 40px;
+        
+    }
+    .tth{
+        font-size: 54px;
+        color: #ff7200;
+        background-image: url('/storage/emulated/0/xender/image/screenshot_20250812-215714.jpg');
+        background-size: 300px;
+        background-position-x: 4in;
+        background-position-y: 13em;
+        border: 1px solid #fff;
+        border-top: none;
+        border-radius: 12px;
+        box-shadow: 0 0 1px aqua;
+    }
+    /* Design format */
+    .tth:hover {
+        border-top: 2px double cyan;
+        box-shadow: 0 0 2em aqua;
+        border-right: 3px inset #fff;
+        border-bottom: none;
+        cursor: pointer;
+    }
+    
+          form {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.preview {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.uploader {
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.preview {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.preview video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.uploader {
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.preview {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.preview video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.image{
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 5em blue;
+}
+.webpage {
+    border-radius: 8px;
+    border: 6px double #06290B;
+    text-decoration: bold;
+    margin: 12px ;
+    color: white;
+    background: black;
+    font-size: 10px;
+    font-family: arial;
+    padding: 20px;
+    box-shadow: 0 0 1em #3AA1FF;
+}
+.webpage:hover {
+    transition: 0.4s ease-out;
+    border-top: none;
+    border-right: none;
+    background: white;
+    cursor: pointer;
+    color: black;
+    box-shadow: 0 0 1em #3aa1ff;
+    transform: translate(30px, 70px) rotate(45deg);
+    
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+    
+        <nav class="navbar">
+        <div class="icon"><img src="/storage/emulated/0/xender/image/1741687179226-1.jpg">
+        <div class="logo">Mk James Erf'</div>
+        </div>
+            <ul class="nav-links">
+                <li><button class="but" onclick="document.body.classList.toggle('dark')">⛅</button></li>
+            <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1 class="pick">Creative <br><b class="tth">Designer &</b><br> Developer</h1>
+            <p>I create modern, professional and visually stunning digital experiences.</p>
+            <a href="#portfolio" class="btn">View My Work</a><br>
+            <a href="http://localhost:26543/storage/emulated/0/Alarms/E2E+CHAT.html" class="btn"><b>Get In Touch!</b></a>
+        
+       
+        </div>
+
+    </section>
+    
+<section class="trf">
+    <img class="prf" src="/storage/emulated/0/dcim/camera/img_20250808_135841_transcpr.jpg" alt="Profile Photo">
+    <p class="mk"><b>Ofonime E. James</b></p><p class="te">Graphic Designer | Web Developer <br>| Data Analyst |</p><p class="emoji"><i>React:</i> <df>❤️</df>  <ju>😎</ju>  <gt>🥳<gt></gt></p>
+</section>
+    <!-- About -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I am a professional creative designer specializing in branding, UI/UX,
+            graphics, and modern web design. I focus on delivering clean,
+            professional and impactful designs.
+        </p>
+    </section>
+
+<section class="trf">
+    <img class="prf" src="/storage/emulated/0/dcim/camera/img_20250808_135841_transcpr.jpg" alt="Profile Photo">
+    <p class="mk"><b>Ofonime E. James</b></p><p class="te">Graphic Designer | Web Developer <br>| Data Analyst |</p><p class="emoji"><i>React:</i> <df>❤️</df>  <ju>😎</ju>  <gt>🥳<gt></gt></p>
+</section>
+    <!-- Portfolio -->
+    <section id="portfolio" class="section">
+        <h2>My Work</h2>
+
+        <div class="filter-buttons">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="design">Design</button>
+            
+            <button data-filter="web">Web</button>
+            <button data-filter="branding">Branding</button>
+        </div>
+
+        <div id="port"class="portfolio-grid">
+            <div class="portfolio-item design">
+                <img src="/storage/emulated/0/xender/image/screenshot_20250812-215714.jpg" alt="">
+            </div>
+    <div class="portfolio-item web">
+        <a href="http://localhost:26543/storage/emulated/0/Alarms/For+church+.html"><button class="webpage">TACN, IK. <br>ASSEMBLY WEBPAGE<br><i>Click For Sample</i></button></a>
+    
+         <a href="http://localhost:26543/storage/emulated/0/Alarms/E2E+CHAT.html"><button class="webpage">Form <br> WEBPAGE<br><i>Click For Sample</i></button></a>
+                 
+            <a href="http://localhost:26543/storage/emulated/0/Alarms/Educational.html"><button class="webpage">MK James Erf'<br> Educatoonal Webpage<br><i>Click For Sample</i></button></a>
+
+            <a href="http://localhost:26543/storage/emulated/0/Alarms/For+church+.html"><button class="webpage">TACN, IK. <br>ASSEMBLY WEBPAGE<br><i>Click For Sample</i></button></a>
+            </div>
+            <div class="portfolio-item branding">
+                <img src="/storage/emulated/0/pictures/screenshots/screenshot_20260325-231127.png" alt="">
+            </div>
+            <div class="portfolio-item design">
+                <img src="/storage/emulated/0/pictures/screenshots/screenshot_20260324-002108.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="trf">
+    <img class="prf" src="/storage/emulated/0/dcim/camera/img_20250808_135841_transcpr.jpg" alt="Profile Photo">
+    <p class="mk"><b>Ofonime E. James</b></p><p class="te">Graphic Designer | Web Developer <br>| Data Analyst |</p><p class="emoji"><i>React:</i> <df>❤️</df>  <ju>😎</ju>  <gt>🥳<gt></gt></p>
+</section>
+
+    <!-- Services -->
+    <section id="services" class="section dark">
+        <h2>Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Graphic Design</h3>
+                <p id="pro">Professional branding, social media graphics, and marketing materials.</p>
+            </div>
+            <div class="service-card">
+                <h3>Web Design</h3>
+                <p>Modern, responsive, and dynamic websites tailored to your brand.</p>
+            </div>
+            <div class="service-card">
+                <h3>UI/UX Design</h3>
+                <p>User-centered interfaces that enhance user engagement and experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero1">
+
+        <div class="hero-content">
+
+            <h1>Solid Position To Meet Your Demands!</h1>
+            <p>I create modern, professional and visually stunning digital experiences.</p>
+ <a href="http://localhost:26543/storage/emulated/0/Alarms/E2E+CHAT.html" class="btn"><b>Get In Touch!</b></a>
+        
+       
+        </div>
+
+    </section>
+        
+  <div class="uploader">
+    <input type="file" id="file-input">
+    <div class="preview" id="preview"></div>
+  </div>
+  
+  <!-- Vid, Img and othr upload -->
+<section id="Comments-section">
+ 
+</section>
+  
+  <form id="upload-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="image">Image:</label>
+    <input type="file" id="image" accept="image/*">
+
+    <label for="description">Description:</label>
+    <textarea id="description"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+  <div class="preview" id="preview">
+      <img class="" src="" alt="" />
+      <video src="/storage/emulated/0/download/csd.mp4" height="" width="" preload="none" autoplay="autoplay"></video>
+  </div>
+  
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 <b>Mk James Erf.</b><br> All Rights Reserved.</p>
+    </footer>
+
+<script>
+    // Mobile Menu Toggle
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Portfolio Filtering
+const buttons = document.querySelectorAll('.filter-buttons button');
+const items = document.querySelectorAll('.portfolio-item');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+
+        document.querySelector('.filter-buttons .active')
+            .classList.remove('active');
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        items.forEach(item => {
+            if (filter === 'all' || item.classList.contains(filter)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+});
+
+// Scroll Animation
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            section.style.opacity = 6;
+            section.style.transform = "translateY(0)";
+        }
+    });
+});
+
+// Contact Form Alert
+document.getElementById('contactForm')
+.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Thank you! Your message has been sent.");
+});
+
+// Serv Slider
+const testimonials = [
+    "Design and accuracy in models and creativity isn't just about you making statue that looks reflective to one's eye; but probably the message you share accross carries a lot of impact than the design itself!",
+    "The area of concern in every designs focuses more on the information it passes, not just about the clauded makeovers... bt creativity to every art work and the passion speaks itself through every piece of work!",
+    "A great ambition lies in every brain work, because it takes a beautiful moment to put out that rear gem or simple comexity called design out there!"
+];
+console.log(testimonials)
+let index = 0;
+const text = document.getElementById("pro");
+setInterval(() => {
+    index = (index + 1) % testimonials.length;
+    text.innerText = `"${testimonials[index]}"`;
+}, 4000);
+
+// file uploads
+const fileInput = document.getElementById('file-input');
+const preview = document.getElementById('preview');
+
+fileInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    const fileType = file.type;
+    if (fileType.startsWith('image/')) {
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      preview.innerHTML = '';
+      preview.appendChild(img);
+       img.src = URL.createObjectURL(file);
+      preview1.innerHTML = '';
+      preview1.appendChild(img);
+       img.src = URL.createObjectURL(file);
+      preview2.innerHTML = '';
+      preview2.appendChild(img);
+    } else if (fileType.startsWith('video/')) {
+      const video = document.createElement('video');
+      video.src = URL.createObjectURL(file);
+      video.controls = true;
+      preview.innerHTML = '';
+      preview.appendChild(video);
+      preview1.innerHTML = '';
+      preview1.appendChild(video);
+      preview2.innerHTML = '';
+      preview2.appendChild(video);
+    } else {
+      preview.textContent = `File type not supported: ${fileType}`;
+    }
+  }
+});
+</script>
+</body>
+</html>
